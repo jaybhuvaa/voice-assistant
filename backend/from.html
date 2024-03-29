@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Submit Form</title>
+  </head>
+  <body>
+    <h1>Data Entry Form</h1>
+    <form id="field_name">
+      <label for="firstName"><b>First Name:</b></label>
+      <input type="text" id="firstName" name="firstName" /><br /><br />
+
+      <label for="lastName"><b>Last Name:</b></label>
+      <input type="text" id="lastName" name="lastName" /><br /><br />
+
+      <label for="message"><b>Message:</b></label
+      ><br />
+      <textarea id="message" name="message" rows="4" cols="50"></textarea><br />
+
+      <label for="gender"><b>Gender:</b></label><br />
+      <div class="radio-group">
+        <input
+          type="radio"
+          id="male"
+          name="gender"
+          value="male"
+          onclick="updateChecked('male')"
+        />
+        <label for="male">Male</label>
+
+        <input
+          type="radio"
+          id="female"
+          name="gender"
+          value="female"
+          onclick="updateChecked('female')"
+        />
+        <label for="female">Female</label>
+
+        <input
+          type="radio"
+          id="other"
+          name="gender"
+          value="other"
+          onclick="updateChecked('other')"
+        />
+        <label for="other">Other</label>
+
+        <input
+          type="radio"
+          id="prefer_not_say"
+          name="gender"
+          value="prefer_not_say"
+          onclick="updateChecked('prefer_not_say')"
+        />
+        <label for="prefer_not_say">Prefer Not to Say</label>
+      </div>
+      <br />
+      <label for="hobbies"><b>Hobbies:</b></label
+      ><br />
+      <div class="checkbox-group">
+        <input type="checkbox" id="hobby1" name="hobbies" value="reading" />
+        <label for="hobby1">Reading</label>
+
+        <input type="checkbox" id="hobby2" name="hobbies" value="gaming" />
+        <label for="hobby2">Gaming</label>
+
+        <input type="checkbox" id="hobby3" name="hobbies" value="traveling" />
+        <label for="hobby3">Traveling</label>
+      </div>
+      <br />
+
+      <label for="country"><b>Country:</b></label
+      ><br />
+      <select id="country" name="country">
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="uk">UK</option></select
+      ><br />
+
+      <br /><br />
+
+      <button type="submit" value="Submit" id="submit" onclick="submitForm()">
+        Submit
+      </button>
+    </form>
+
+    <script>
+       function updateChecked(id) {
+          var radioButton = document.getElementById(id);
+          radioButton.checked = true;
+        }
+
+      function submitForm() {
+        alert("Form submitted successfully!");
+      }
+    </script>
+  </body>
+</html>
